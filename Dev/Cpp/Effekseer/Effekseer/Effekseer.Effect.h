@@ -619,6 +619,12 @@ public:
 	virtual EffectNode* GetRoot() const = 0;
 
 	/**
+        @brief
+    \~English	A flag that an effect doesn't destroy automatically after play
+	*/
+	virtual bool IsLiveForever() const = 0;
+
+	/**
 		@brief
 	\~English	Calculate a term of instances where the effect exists
 	\~Japanese	エフェクトが存在する期間を計算する。
@@ -767,6 +773,12 @@ public:
 	\~Japanese	インスタンスが存在する期間を計算する。
 	*/
 	virtual EffectInstanceTerm CalculateInstanceTerm(EffectInstanceTerm& parentTerm) const = 0;
+
+	/**
+    @brief 
+    \~English	A flag that if an effect node doesn't destroy automatically after play
+	*/
+	virtual bool IsLiveForever() const = 0;
 };
 
 //----------------------------------------------------------------------------------
